@@ -24,9 +24,9 @@ async function removeContact(id) {
   if (idx === -1) {
     return null;
   }
-  const newProducts = products.filter((_, index) => index !== idx);
-  await fs.writeFile(filePath, JSON.stringify(newProducts));
-  return products[idx];
+  const newContacts = contacts.filter((_, index) => index !== idx);
+  await fs.writeFile(filePath, JSON.stringify(newContacts));
+  return contacts[idx];
 }
 
 async function addContact(name, email, phone) {
